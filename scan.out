@@ -1,0 +1,968 @@
+Title	Remove User Host-Based Authentication Files
+Rule	no_user_host_based_files
+Result	pass
+
+Title	Remove Host-Based Authentication Files
+Rule	no_host_based_files
+Result	pass
+
+Title	Uninstall rsh-server Package
+Rule	package_rsh-server_removed
+Result	pass
+
+Title	Uninstall telnet-server Package
+Rule	package_telnet-server_removed
+Result	pass
+
+Title	Uninstall ypserv Package
+Rule	package_ypserv_removed
+Result	pass
+
+Title	Uninstall tftp-server Package
+Rule	package_tftp-server_removed
+Result	pass
+
+Title	Ensure tftp Daemon Uses Secure Mode
+Rule	tftpd_uses_secure_mode
+Result	pass
+
+Title	Uninstall vsftpd Package
+Rule	package_vsftpd_removed
+Result	pass
+
+Title	Ensure Default SNMP Password Is Not Used
+Rule	snmpd_not_default_password
+Result	pass
+
+Title	Verify Group Who Owns /etc/cron.allow file
+Rule	file_groupowner_cron_allow
+Result	pass
+
+Title	Verify User Who Owns /etc/cron.allow file
+Rule	file_owner_cron_allow
+Result	pass
+
+Title	Remove the X Windows Package Group
+Rule	package_xorg-x11-server-common_removed
+Result	pass
+
+Title	Configure SSSD LDAP Backend Client CA Certificate Location
+Rule	sssd_ldap_configure_tls_ca_dir
+Result	notapplicable
+
+Title	Configure SSSD LDAP Backend to Use TLS For All Transactions
+Rule	sssd_ldap_start_tls
+Result	notapplicable
+
+Title	Configure SSSD LDAP Backend Client CA Certificate
+Rule	sssd_ldap_configure_tls_ca
+Result	notapplicable
+
+Title	Configure PAM in SSSD Services
+Rule	sssd_enable_pam_services
+Result	notapplicable
+
+Title	Configure Time Service Maxpoll Interval
+Rule	chronyd_or_ntpd_set_maxpoll
+Result	fail
+
+Title	Disable KDump Kernel Crash Analyzer (kdump)
+Rule	service_kdump_disabled
+Result	fail
+
+Title	Prevent Unrestricted Mail Relaying
+Rule	postfix_prevent_unrestricted_relay
+Result	notchecked
+
+Title	Mount Remote Filesystems with noexec
+Rule	mount_option_noexec_remote_filesystems
+Result	pass
+
+Title	Mount Remote Filesystems with Kerberos Security
+Rule	mount_option_krb_sec_remote_filesystems
+Result	pass
+
+Title	Mount Remote Filesystems with nosuid
+Rule	mount_option_nosuid_remote_filesystems
+Result	pass
+
+Title	Disable SSH Support for User Known Hosts
+Rule	sshd_disable_user_known_hosts
+Result	error
+
+Title	Disable SSH Access via Empty Passwords
+Rule	sshd_disable_empty_passwords
+Result	error
+
+Title	Set SSH Client Alive Max Count
+Rule	sshd_set_keepalive
+Result	error
+
+Title	Set SSH Idle Timeout Interval
+Rule	sshd_set_idle_timeout
+Result	error
+
+Title	Enable SSH Warning Banner
+Rule	sshd_enable_warning_banner
+Result	error
+
+Title	Use Only FIPS 140-2 Validated MACs
+Rule	sshd_use_approved_macs
+Result	unknown
+
+Title	Disable Kerberos Authentication
+Rule	sshd_disable_kerb_auth
+Result	error
+
+Title	Allow Only SSH Protocol 2
+Rule	sshd_allow_only_protocol2
+Result	error
+
+Title	Disable SSH Support for .rhosts Files
+Rule	sshd_disable_rhosts
+Result	error
+
+Title	Disable SSH Support for Rhosts RSA Authentication
+Rule	sshd_disable_rhosts_rsa
+Result	pass
+
+Title	Do Not Allow SSH Environment Options
+Rule	sshd_do_not_permit_user_env
+Result	error
+
+Title	Enable Encrypted X11 Forwarding
+Rule	sshd_enable_x11_forwarding
+Result	error
+
+Title	Use Only FIPS 140-2 Validated Ciphers
+Rule	sshd_use_approved_ciphers
+Result	error
+
+Title	Disable Host-Based Authentication
+Rule	disable_host_auth
+Result	error
+
+Title	Enable Use of Strict Mode Checking
+Rule	sshd_enable_strictmodes
+Result	error
+
+Title	Enable Use of Privilege Separation
+Rule	sshd_use_priv_separation
+Result	error
+
+Title	Enable SSH Print Last Log
+Rule	sshd_print_last_log
+Result	error
+
+Title	Disable GSSAPI Authentication
+Rule	sshd_disable_gssapi_auth
+Result	error
+
+Title	Disable Compression Or Set Compression to delayed
+Rule	sshd_disable_compression
+Result	error
+
+Title	Disable SSH Root Login
+Rule	sshd_disable_root_login
+Result	error
+
+Title	Install the OpenSSH Server Package
+Rule	package_openssh-server_installed
+Result	pass
+
+Title	Enable the OpenSSH Service
+Rule	service_sshd_enabled
+Result	pass
+
+Title	Verify Permissions on SSH Server Public *.pub Key Files
+Rule	file_permissions_sshd_pub_key
+Result	pass
+
+Title	Verify Permissions on SSH Server Private *_key Key Files
+Rule	file_permissions_sshd_private_key
+Result	pass
+
+Title	Ensure Users Cannot Change GNOME3 Session Idle Settings
+Rule	dconf_gnome_session_idle_user_locks
+Result	notapplicable
+
+Title	Set GNOME3 Screensaver Lock Delay After Activation Period
+Rule	dconf_gnome_screensaver_lock_delay
+Result	notapplicable
+
+Title	Ensure Users Cannot Change GNOME3 Screensaver Settings
+Rule	dconf_gnome_screensaver_user_locks
+Result	notapplicable
+
+Title	Enable GNOME3 Screensaver Idle Activation
+Rule	dconf_gnome_screensaver_idle_activation_enabled
+Result	notapplicable
+
+Title	Set GNOME3 Screensaver Inactivity Timeout
+Rule	dconf_gnome_screensaver_idle_delay
+Result	notapplicable
+
+Title	Ensure Users Cannot Change GNOME3 Screensaver Lock After Idle Period
+Rule	dconf_gnome_screensaver_lock_locked
+Result	notapplicable
+
+Title	Enable GNOME3 Screensaver Lock After Idle Period
+Rule	dconf_gnome_screensaver_lock_enabled
+Result	notapplicable
+
+Title	Ensure Users Cannot Change GNOME3 Screensaver Idle Activation
+Rule	dconf_gnome_screensaver_idle_activation_locked
+Result	notapplicable
+
+Title	Enable the GNOME3 Login Smartcard Authentication
+Rule	dconf_gnome_enable_smartcard_auth
+Result	notapplicable
+
+Title	Disable GDM Automatic Login
+Rule	gnome_gdm_disable_automatic_login
+Result	notapplicable
+
+Title	Disable GDM Guest Login
+Rule	gnome_gdm_disable_guest_login
+Result	notapplicable
+
+Title	Make sure that the dconf databases are up-to-date with regards to respective keyfiles
+Rule	dconf_db_up_to_date
+Result	notapplicable
+
+Title	Ensure Users Re-Authenticate for Privilege Escalation - sudo NOPASSWD
+Rule	sudo_remove_nopasswd
+Result	error
+
+Title	The Installed Operating System Is Vendor Supported
+Rule	installed_OS_is_vendor_supported
+Result	pass
+
+Title	Enable FIPS Mode in GRUB2
+Rule	grub2_enable_fips_mode
+Result	fail
+
+Title	Install Virus Scanning Software
+Rule	install_antivirus
+Result	fail
+
+Title	Verify and Correct File Permissions with RPM
+Rule	rpm_verify_permissions
+Result	pass
+
+Title	Verify and Correct Ownership with RPM
+Rule	rpm_verify_ownership
+Result	pass
+
+Title	Verify File Hashes with RPM
+Rule	rpm_verify_hashes
+Result	pass
+
+Title	Install AIDE
+Rule	package_aide_installed
+Result	fail
+
+Title	Configure AIDE to Verify Extended Attributes
+Rule	aide_verify_ext_attributes
+Result	fail
+
+Title	Configure AIDE to Verify Access Control Lists (ACLs)
+Rule	aide_verify_acls
+Result	fail
+
+Title	Configure AIDE to Use FIPS 140-2 for Validating Hashes
+Rule	aide_use_fips_hashes
+Result	fail
+
+Title	Configure Notification of Post-AIDE Scan Details
+Rule	aide_scan_notification
+Result	fail
+
+Title	Configure Periodic Execution of AIDE
+Rule	aide_periodic_cron_checking
+Result	fail
+
+Title	Ensure Software Patches Installed
+Rule	security_patches_up_to_date
+Result	notchecked
+
+Title	Ensure yum Removes Previous Package Versions
+Rule	clean_components_post_updating
+Result	fail
+
+Title	Ensure gpgcheck Enabled In Main yum Configuration
+Rule	ensure_gpgcheck_globally_activated
+Result	pass
+
+Title	Ensure gpgcheck Enabled for Local Packages
+Rule	ensure_gpgcheck_local_packages
+Result	fail
+
+Title	Ensure /home Located On Separate Partition
+Rule	partition_for_home
+Result	fail
+
+Title	Ensure /tmp Located On Separate Partition
+Rule	partition_for_tmp
+Result	fail
+
+Title	Ensure /var Located On Separate Partition
+Rule	partition_for_var
+Result	fail
+
+Title	Ensure /var/log/audit Located On Separate Partition
+Rule	partition_for_var_log_audit
+Result	fail
+
+Title	Ensure Logs Sent To Remote Host
+Rule	rsyslog_remote_loghost
+Result	fail
+
+Title	Ensure cron Is Logging To Rsyslog
+Rule	rsyslog_cron_logging
+Result	pass
+
+Title	Ensure rsyslog Does Not Accept Remote Messages Unless Acting As Log Server
+Rule	rsyslog_nolisten
+Result	pass
+
+Title	Disable Kernel Parameter for Accepting Source-Routed Packets on all IPv6 Interfaces
+Rule	sysctl_net_ipv6_conf_all_accept_source_route
+Result	notchecked
+
+Title	Verify Any Configured IPSec Tunnel Connections
+Rule	libreswan_approved_tunnels
+Result	notchecked
+
+Title	Set Default firewalld Zone for Incoming Packets
+Rule	set_firewalld_default_zone
+Result	fail
+
+Title	Configure the Firewalld Ports
+Rule	configure_firewalld_ports
+Result	fail
+
+Title	Configure firewalld To Rate Limit Connections
+Rule	configure_firewalld_rate_limiting
+Result	fail
+
+Title	Verify firewalld Enabled
+Rule	service_firewalld_enabled
+Result	pass
+
+Title	Disable Kernel Parameter for Accepting Source-Routed Packets on IPv4 Interfaces by Default
+Rule	sysctl_net_ipv4_conf_default_accept_source_route
+Result	pass
+
+Title	Disable Kernel Parameter for Accepting ICMP Redirects by Default on IPv4 Interfaces
+Rule	sysctl_net_ipv4_conf_default_accept_redirects
+Result	fail
+
+Title	Enable Kernel Parameter to Use Reverse Path Filtering on all IPv4 Interfaces by Default
+Rule	sysctl_net_ipv4_conf_default_rp_filter
+Result	pass
+
+Title	Disable Kernel Parameter for Accepting Source-Routed Packets on all IPv4 Interfaces
+Rule	sysctl_net_ipv4_conf_all_accept_source_route
+Result	pass
+
+Title	Disable Accepting ICMP Redirects for All IPv4 Interfaces
+Rule	sysctl_net_ipv4_conf_all_accept_redirects
+Result	fail
+
+Title	Enable Kernel Parameter to Use Reverse Path Filtering on all IPv4 Interfaces
+Rule	sysctl_net_ipv4_conf_all_rp_filter
+Result	pass
+
+Title	Enable Kernel Parameter to Ignore ICMP Broadcast Echo Requests on IPv4 Interfaces
+Rule	sysctl_net_ipv4_icmp_echo_ignore_broadcasts
+Result	fail
+
+Title	Disable Kernel Parameter for IP Forwarding on IPv4 Interfaces
+Rule	sysctl_net_ipv4_ip_forward
+Result	fail
+
+Title	Disable Kernel Parameter for Sending ICMP Redirects on all IPv4 Interfaces
+Rule	sysctl_net_ipv4_conf_all_send_redirects
+Result	fail
+
+Title	Disable Kernel Parameter for Sending ICMP Redirects on all IPv4 Interfaces by Default
+Rule	sysctl_net_ipv4_conf_default_send_redirects
+Result	fail
+
+Title	Disable DCCP Support
+Rule	kernel_module_dccp_disabled
+Result	fail
+
+Title	Deactivate Wireless Network Interfaces
+Rule	wireless_disable_interfaces
+Result	pass
+
+Title	Ensure System is Not Acting as a Network Sniffer
+Rule	network_sniffer_disabled
+Result	pass
+
+Title	Configure Multiple DNS Servers in /etc/resolv.conf
+Rule	network_configure_name_resolution
+Result	fail
+
+Title	Set Boot Loader Password in grub2
+Rule	grub2_password
+Result	pass
+
+Title	Boat Loader Is Not Installed On Removeable Media
+Rule	grub2_no_removeable_media
+Result	notchecked
+
+Title	Set the UEFI Boot Loader Password
+Rule	grub2_uefi_password
+Result	pass
+
+Title	Ensure No Device Files are Unlabeled by SELinux
+Rule	selinux_all_devicefiles_labeled
+Result	pass
+
+Title	Map System Users To The Appropriate SELinux Role
+Rule	selinux_user_login_roles
+Result	notchecked
+
+Title	Ensure SELinux State is Enforcing
+Rule	selinux_state
+Result	pass
+
+Title	Set Password Minimum Age
+Rule	accounts_minimum_age_login_defs
+Result	fail
+
+Title	Set Password Maximum Age
+Rule	accounts_maximum_age_login_defs
+Result	fail
+
+Title	Set Existing Passwords Minimum Age
+Rule	accounts_password_set_min_life_existing
+Result	notchecked
+
+Title	Set Existing Passwords Maximum Age
+Rule	accounts_password_set_max_life_existing
+Result	notchecked
+
+Title	Verify Only Root Has UID 0
+Rule	accounts_no_uid_except_zero
+Result	pass
+
+Title	Set Account Expiration Following Inactivity
+Rule	account_disable_post_pw_expiration
+Result	fail
+
+Title	Prevent Login to Accounts With Empty Password
+Rule	no_empty_passwords
+Result	fail
+
+Title	All GIDs referenced in /etc/passwd must be defined in /etc/group
+Rule	gid_passwd_group_same
+Result	pass
+
+Title	Install the screen Package
+Rule	package_screen_installed
+Result	fail
+
+Title	Install Smart Card Packages For Multifactor Authentication
+Rule	install_smartcard_packages
+Result	fail
+
+Title	Configure Smart Card Certificate Status Checking
+Rule	smartcard_configure_cert_checking
+Result	notchecked
+
+Title	Enable Smart Card Login
+Rule	smartcard_auth
+Result	fail
+
+Title	Require Authentication for Single User Mode
+Rule	require_singleuser_auth
+Result	pass
+
+Title	Disable Ctrl-Alt-Del Reboot Activation
+Rule	disable_ctrlaltdel_reboot
+Result	fail
+
+Title	Set Password Hashing Algorithm in /etc/login.defs
+Rule	set_password_hashing_algorithm_logindefs
+Result	pass
+
+Title	Set PAM's Password Hashing Algorithm
+Rule	set_password_hashing_algorithm_systemauth
+Result	pass
+
+Title	Set Password Hashing Algorithm in /etc/libuser.conf
+Rule	set_password_hashing_algorithm_libuserconf
+Result	pass
+
+Title	Configure the root Account for Failed Password Attempts
+Rule	accounts_passwords_pam_faillock_deny_root
+Result	fail
+
+Title	Set Lockout Time for Failed Password Attempts
+Rule	accounts_passwords_pam_faillock_unlock_time
+Result	fail
+
+Title	Limit Password Reuse
+Rule	accounts_password_pam_unix_remember
+Result	fail
+
+Title	Set Interval For Counting Failed Password Attempts
+Rule	accounts_passwords_pam_faillock_interval
+Result	fail
+
+Title	Set Deny For Failed Password Attempts
+Rule	accounts_passwords_pam_faillock_deny
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Length
+Rule	accounts_password_pam_minlen
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Maximum Consecutive Repeating Characters from Same Character Class
+Rule	accounts_password_pam_maxclassrepeat
+Result	fail
+
+Title	Set Password Maximum Consecutive Repeating Characters
+Rule	accounts_password_pam_maxrepeat
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Digit Characters
+Rule	accounts_password_pam_dcredit
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Different Categories
+Rule	accounts_password_pam_minclass
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Different Characters
+Rule	accounts_password_pam_difok
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Special Characters
+Rule	accounts_password_pam_ocredit
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Lowercase Characters
+Rule	accounts_password_pam_lcredit
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Minimum Uppercase Characters
+Rule	accounts_password_pam_ucredit
+Result	fail
+
+Title	Ensure PAM Enforces Password Requirements - Authentication Retry Prompts Permitted Per-Session
+Rule	accounts_password_pam_retry
+Result	pass
+
+Title	Ensure PAM Displays Last Logon/Access Notification
+Rule	display_login_attempts
+Result	pass
+
+Title	Enable GNOME3 Login Warning Banner
+Rule	dconf_gnome_banner_enabled
+Result	notapplicable
+
+Title	Set the GNOME3 Login Warning Banner Text
+Rule	dconf_gnome_login_banner_text
+Result	notapplicable
+
+Title	Modify the System Login Banner
+Rule	banner_etc_issue
+Result	fail
+
+Title	Ensure the Default Umask is Set Correctly For Interactive Users
+Rule	accounts_umask_interactive_users
+Result	notchecked
+
+Title	Ensure the Default Umask is Set Correctly in login.defs
+Rule	accounts_umask_etc_login_defs
+Result	pass
+
+Title	User Initialization Files Must Not Run World-Writable Programs
+Rule	accounts_user_dot_no_world_writable_programs
+Result	notchecked
+
+Title	User Initialization Files Must Be Owned By the Primary User
+Rule	accounts_user_dot_user_ownership
+Result	notchecked
+
+Title	Ensure All User Initialization Files Have Mode 0740 Or Less Permissive
+Rule	file_permission_user_init_files
+Result	notchecked
+
+Title	All Interactive Users Home Directories Must Exist
+Rule	accounts_user_interactive_home_directory_exists
+Result	notchecked
+
+Title	Ensure Home Directories are Created for New Users
+Rule	accounts_have_homedir_login_defs
+Result	pass
+
+Title	Ensure the Logon Failure Delay is Set Correctly in login.defs
+Rule	accounts_logon_fail_delay
+Result	fail
+
+Title	All User Files and Directories In The Home Directory Must Be Group-Owned By The Primary User
+Rule	accounts_users_home_files_groupownership
+Result	notchecked
+
+Title	All Interactive User Home Directories Must Be Owned By The Primary User
+Rule	file_ownership_home_directories
+Result	notchecked
+
+Title	Set Interactive Session Timeout
+Rule	accounts_tmout
+Result	fail
+
+Title	All User Files and Directories In The Home Directory Must Have Mode 0750 Or Less Permissive
+Rule	accounts_users_home_files_permissions
+Result	notchecked
+
+Title	Limit the Number of Concurrent Login Sessions Allowed Per User
+Rule	accounts_max_concurrent_login_sessions
+Result	fail
+
+Title	All Interactive User Home Directories Must Be Group-Owned By The Primary User
+Rule	file_groupownership_home_directories
+Result	notchecked
+
+Title	All Interactive Users Must Have A Home Directory Defined
+Rule	accounts_user_interactive_home_directory_defined
+Result	notchecked
+
+Title	Ensure that Users Path Contains Only Local Directories
+Rule	accounts_user_home_paths_only
+Result	notchecked
+
+Title	All User Files and Directories In The Home Directory Must Be Owned By The Primary User
+Rule	accounts_users_home_files_ownership
+Result	notchecked
+
+Title	User Initialization Files Must Be Group-Owned By The Primary User
+Rule	accounts_user_dot_group_ownership
+Result	notchecked
+
+Title	All Interactive User Home Directories Must Have mode 0750 Or Less Permissive
+Rule	file_permissions_home_directories
+Result	notchecked
+
+Title	Encrypt Audit Records Sent With audispd Plugin
+Rule	auditd_audispd_encrypt_sent_records
+Result	fail
+
+Title	Configure audispd Plugin To Send Logs To Remote Server
+Rule	auditd_audispd_configure_remote_server
+Result	fail
+
+Title	Configure auditd space_left on Low Disk Space
+Rule	auditd_data_retention_space_left
+Result	fail
+
+Title	Configure auditd mail_acct Action on Low Disk Space
+Rule	auditd_data_retention_action_mail_acct
+Result	fail
+
+Title	Configure audispd's Plugin network_failure_action On Network Failure
+Rule	auditd_audispd_network_failure_action
+Result	notchecked
+
+Title	Configure auditd space_left Action on Low Disk Space
+Rule	auditd_data_retention_space_left_action
+Result	fail
+
+Title	Configure audispd's Plugin disk_full_action When Disk Is Full
+Rule	auditd_audispd_disk_full_action
+Result	notchecked
+
+Title	Ensure auditd Collects Information on Kernel Module Loading and Unloading - finit_module
+Rule	audit_rules_kernel_module_loading_finit
+Result	fail
+
+Title	Ensure auditd Collects Information on Kernel Module Loading - init_module
+Rule	audit_rules_kernel_module_loading_init
+Result	fail
+
+Title	Ensure auditd Collects Information on Kernel Module Unloading - delete_module
+Rule	audit_rules_kernel_module_loading_delete
+Result	fail
+
+Title	Record Attempts to Alter Logon and Logout Events - lastlog
+Rule	audit_rules_login_events_lastlog
+Result	fail
+
+Title	Record Attempts to Alter Logon and Logout Events - faillock
+Rule	audit_rules_login_events_faillock
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - fchown
+Rule	audit_rules_dac_modification_fchown
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - setxattr
+Rule	audit_rules_dac_modification_setxattr
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - fsetxattr
+Rule	audit_rules_dac_modification_fsetxattr
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - chown
+Rule	audit_rules_dac_modification_chown
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - fchownat
+Rule	audit_rules_dac_modification_fchownat
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - lchown
+Rule	audit_rules_dac_modification_lchown
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - chmod
+Rule	audit_rules_dac_modification_chmod
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - removexattr
+Rule	audit_rules_dac_modification_removexattr
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - fremovexattr
+Rule	audit_rules_dac_modification_fremovexattr
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - lsetxattr
+Rule	audit_rules_dac_modification_lsetxattr
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - fchmod
+Rule	audit_rules_dac_modification_fchmod
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - lremovexattr
+Rule	audit_rules_dac_modification_lremovexattr
+Result	fail
+
+Title	Record Events that Modify the System's Discretionary Access Controls - fchmodat
+Rule	audit_rules_dac_modification_fchmodat
+Result	fail
+
+Title	Record Unsuccessful Access Attempts to Files - truncate
+Rule	audit_rules_unsuccessful_file_modification_truncate
+Result	fail
+
+Title	Record Unsuccessful Access Attempts to Files - openat
+Rule	audit_rules_unsuccessful_file_modification_openat
+Result	fail
+
+Title	Record Unsuccessful Access Attempts to Files - creat
+Rule	audit_rules_unsuccessful_file_modification_creat
+Result	fail
+
+Title	Record Unsuccessful Access Attempts to Files - open
+Rule	audit_rules_unsuccessful_file_modification_open
+Result	fail
+
+Title	Record Unsuccessful Access Attempts to Files - open_by_handle_at
+Rule	audit_rules_unsuccessful_file_modification_open_by_handle_at
+Result	fail
+
+Title	Record Unsuccessful Access Attempts to Files - ftruncate
+Rule	audit_rules_unsuccessful_file_modification_ftruncate
+Result	fail
+
+Title	Record Any Attempts to Run setfiles
+Rule	audit_rules_execution_setfiles
+Result	fail
+
+Title	Record Any Attempts to Run setsebool
+Rule	audit_rules_execution_setsebool
+Result	fail
+
+Title	Record Any Attempts to Run semanage
+Rule	audit_rules_execution_semanage
+Result	fail
+
+Title	Record Any Attempts to Run chcon
+Rule	audit_rules_execution_chcon
+Result	fail
+
+Title	Ensure auditd Collects File Deletion Events by User - rmdir
+Rule	audit_rules_file_deletion_events_rmdir
+Result	fail
+
+Title	Ensure auditd Collects File Deletion Events by User - unlinkat
+Rule	audit_rules_file_deletion_events_unlinkat
+Result	fail
+
+Title	Ensure auditd Collects File Deletion Events by User - rename
+Rule	audit_rules_file_deletion_events_rename
+Result	fail
+
+Title	Ensure auditd Collects File Deletion Events by User - renameat
+Rule	audit_rules_file_deletion_events_renameat
+Result	fail
+
+Title	Ensure auditd Collects File Deletion Events by User - unlink
+Rule	audit_rules_file_deletion_events_unlink
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - passwd
+Rule	audit_rules_privileged_commands_passwd
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - sudo
+Rule	audit_rules_privileged_commands_sudo
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - postdrop
+Rule	audit_rules_privileged_commands_postdrop
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - chsh
+Rule	audit_rules_privileged_commands_chsh
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - postqueue
+Rule	audit_rules_privileged_commands_postqueue
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - chage
+Rule	audit_rules_privileged_commands_chage
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - userhelper
+Rule	audit_rules_privileged_commands_userhelper
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - pam_timestamp_check
+Rule	audit_rules_privileged_commands_pam_timestamp_check
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - crontab
+Rule	audit_rules_privileged_commands_crontab
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - umount
+Rule	audit_rules_privileged_commands_umount
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - unix_chkpwd
+Rule	audit_rules_privileged_commands_unix_chkpwd
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - ssh-keysign
+Rule	audit_rules_privileged_commands_ssh_keysign
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - gpasswd
+Rule	audit_rules_privileged_commands_gpasswd
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands
+Rule	audit_rules_privileged_commands
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - su
+Rule	audit_rules_privileged_commands_su
+Result	fail
+
+Title	Ensure auditd Collects Information on the Use of Privileged Commands - newgrp
+Rule	audit_rules_privileged_commands_newgrp
+Result	fail
+
+Title	Ensure auditd Collects System Administrator Actions
+Rule	audit_rules_sysadmin_actions
+Result	fail
+
+Title	Ensure auditd Collects Information on Exporting to Media (successful)
+Rule	audit_rules_media_export
+Result	fail
+
+Title	Record Events that Modify User/Group Information - /etc/shadow
+Rule	audit_rules_usergroup_modification_shadow
+Result	fail
+
+Title	Record Events that Modify User/Group Information - /etc/security/opasswd
+Rule	audit_rules_usergroup_modification_opasswd
+Result	fail
+
+Title	System Audit Logs Must Be Owned By Root
+Rule	file_ownership_var_log_audit
+Result	pass
+
+Title	Shutdown System When Auditing Failures Occur
+Rule	audit_rules_system_shutdown
+Result	fail
+
+Title	System Audit Logs Must Have Mode 0640 or Less Permissive
+Rule	file_permissions_var_log_audit
+Result	fail
+
+Title	Record Events that Modify User/Group Information - /etc/gshadow
+Rule	audit_rules_usergroup_modification_gshadow
+Result	fail
+
+Title	Record Events that Modify User/Group Information - /etc/passwd
+Rule	audit_rules_usergroup_modification_passwd
+Result	fail
+
+Title	Record Events that Modify User/Group Information - /etc/group
+Rule	audit_rules_usergroup_modification_group
+Result	fail
+
+Title	Set hostname as computer node name in audit logs
+Rule	auditd_name_format
+Result	fail
+
+Title	Enable auditd Service
+Rule	service_auditd_enabled
+Result	pass
+
+Title	Ensure All Files Are Owned by a Group
+Rule	file_permissions_ungroupowned
+Result	pass
+
+Title	Ensure All World-Writable Directories Are Owned by a System Account
+Rule	dir_perms_world_writable_system_owned
+Result	pass
+
+Title	Ensure All Files Are Owned by a User
+Rule	no_files_unowned_by_user
+Result	pass
+
+Title	Disable the Automounter
+Rule	service_autofs_disabled
+Result	pass
+
+Title	Disable Modprobe Loading of USB Storage Driver
+Rule	kernel_module_usb-storage_disabled
+Result	fail
+
+Title	Add noexec Option to /dev/shm
+Rule	mount_option_dev_shm_noexec
+Result	fail
+
+Title	Add nodev Option to /dev/shm
+Rule	mount_option_dev_shm_nodev
+Result	pass
+
+Title	Add nosuid Option to /dev/shm
+Rule	mount_option_dev_shm_nosuid
+Result	pass
+
+Title	Add nosuid Option to /home
+Rule	mount_option_home_nosuid
+Result	fail
+
+Title	Add nosuid Option to Removable Media Partitions
+Rule	mount_option_nosuid_removable_partitions
+Result	notchecked
+
+Title	Enable Randomized Layout of Virtual Address Space
+Rule	sysctl_kernel_randomize_va_space
+Result	fail
+
